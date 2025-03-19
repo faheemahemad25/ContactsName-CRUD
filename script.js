@@ -144,7 +144,7 @@ searchInputFiled.addEventListener('input', (e)=>{
 
 const total_tr = document.querySelectorAll("#rows-display-container tr");
 const total_records = total_tr.length;
-let records_per_page = 10;
+let records_per_page = 7;
 let total_page = Math.ceil(total_records / records_per_page);
 let page_number = 1;
  
