@@ -1,0 +1,47 @@
+:root{
+    
+    --dark-greyBlue:#183b56;
+
+    --accent-color: #a2c1d9;
+    --blue-color: #2294ed;
+    --blue-color-dark: #1d69a3;
+    --inputEle-bckgrnd-color:#EFF2F9;
+    --section-color:#1E2532;
+
+    --dark-slateBlue-textColor:#374151;
+
+    /* best light text color */
+   --light-greyBlue: #577592;
+   --toolight-grey:#D3D3D3;
+   --light-grey:#808080;
+
+   
+    
+   
+}
+
+.br{
+    border: 2px solid red;
+ }
+ .bg{
+     border: 2px solid green;
+  }
+  .bb{
+     border: 2px solid blue;
+  }
+
+.active{
+   background-color: blue;
+   color: whitesmoke;
+   /* font-weight: bold; */
+}
+/* 
+  .btn:active{
+   transform: scale(0.9);
+  } */
+
+
+/* .Input-element-color-border:focus{
+   outline: 2px solid transparent; //📗🔖 first remove default only then again add ur color 
+   border: 2px solid #50B8E2;
+} */

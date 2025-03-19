@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind cdn -->
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+     <link rel="stylesheet" href="style.css">
+    <title>TodoList-CRUD</title>
+</head>
+<body>
+    <section class="flex justify-center">
+        <div class="todo-container w-[900px] mt-20  p-1">
+            <!-- header -->
+            <div class="add-container">
+                <form action="" class="flex justify-between   mb-4">
+                    <input type="text" name="username" id="username" class=" border-2 border-gray-300 flex-1  rounded-md focus:outline-none focus:border-[#87ceeb]  px-2" placeholder="Enter Your Name" >  <!--📗🔖 flex-1 it used to OR it takes remian space all width and grow itself-->
+                    <button id="addUser" class="text-white bg-[#50B8E2] font-semibold p-2 rounded-md hover:bg-[#2294ed] w-auto btn active:scale-90" > 
+                        Add User 
+                    </button>
+                </form>
+                <div class=" flex justify-between items-center mb-4">
+                    <div>
+                        <p>Recordes Per Page</p>
+                        <select name="" id="selopt" class="p-2">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div class="w-6/12">
+                        <input type="search" id="search" class="w-full border-2 border-gray-300 rounded-md focus:outline-none focus:border-[#87ceeb]  p-2" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+             <!-- body -->
+            <div class="body-container ">
+                <table class="w-full  mb-4">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12 text-start border border-gray-300 p-2 bg-gray-200 ">S.No.</th>
+                            <th class="w-7/12 text-start border border-gray-300 p-2 bg-gray-200 ">User Name</th>
+                            <th class="w-4/12 text-start border border-gray-300 p-2 bg-gray-200 ">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows-display-container">
+                        <!-- data or tr will come from database📗🔖 --> <!-- WE DID NOT WRITE DATA HERE STATIC --> 
+                        <!-- <tr class="userRow">
+                            <td class="border border-gray-300 p-2">1.</td>
+                            <td class="border border-gray-300 p-2 ">Mohit Gupta </td>
+                            <td class="border border-gray-300 p-2">
+                                 <button onclick='EditInfo(${i})' class="  p-2 bg-[#2294ed] text-white rounded btn active:scale-90 m-1">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button onclick='DeleteInfo(${i})' class="  p-2 bg-[#C32148] text-white rounded btn active:scale-90 m-1">
+                                    <i class="deleteBtn fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr> -->
+                        
+                        
+                    </tbody>
+                </table>
+                <!-- pagination -->
+                <div class=" pagination-container flex justify-between items-center">
+                    <div>
+                        <div id="page-details">
+                                <!-- Showing 1 to 10 of 41 -->
+                        </div>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul class="pagination flex" id="paginationNumbers" >
+                                <!-- <li class="page-item p-2 border-2 border-gray-300 ">
+                                    <a class="page-link" href="#">Previous</a>
+                                </li>
+                                <li class="page-item p-2 border-2 border-gray-300">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item p-2 border-2 border-gray-300">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item p-2 border-2 border-gray-300">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item p-2 border-2 border-gray-300">
+                                    <a class="page-link" href="#">Next</a>
+                                </li> -->
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
